@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Título estilizado */
+.header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #c87e17;
+    text-shadow: 0 0 10px rgba(200, 126, 23, 0.8);
+}
+
+.header p {
+    font-size: 25px;
+}
+
+/* Linha decorativa */
+.divider {
+    width: 100px;
+    height: 5px;
+    background: #c87e17;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Contêiner principal */
+.container {
+    background: rgba(141, 65, 21, 0.9);
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #c87e17;
+}
+
+/* Termômetro e Escala */
+.thermometer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Números da meta */
+.labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.labels span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Termômetro */
+.thermometer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.thermometer {
+    width: 80px;
+    height: 400px;
+    background: linear-gradient(to bottom, #53220d, #240d03);
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #c87e17;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.progress {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #dd1212;
+    transition: height 2s ease-in-out, background 2s ease-in-out;
+}
+
+/* Campo de entrada */
+input {
+    padding: 15px;
+    font-size: 22px;
+    width: 100%;
+    border: 2px solid #c87e17;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(36, 13, 3, 0.9);
+    color: white;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 22px;
+    background: #c87e17;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #962020;
+    transform: scale(1.05);
+}
+
+/* Exibição do valor */
+.value-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
